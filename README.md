@@ -191,7 +191,7 @@ Por ejemplo, agrega una breve descripción del sistema en la siguiente sección:
 
 ### Descripción del sistema
 
-Escribe aquí una descripción breve del sistema:Sistema modular en Node.js diseñado para calcular precios finales de productos aplicando reglas de descuento según el tipo de cliente (incluyendo tarifa normal y un 15% de descuento para estudiantes), validado mediante pruebas unitarias automatizadas.
+Proyecto pequeño en Node.js que calcula el precio final de un producto según el tipo de cliente (precio normal o 15% de descuento para estudiantes) y comprueba que los cálculos funcionen bien mediante pruebas automatizadas.
 
 > Respuesta del estudiante: ...
 
@@ -273,46 +273,25 @@ Observe el historial y verifique que aparezcan las ramas, los commits y los merg
 Responda las siguientes preguntas directamente en este archivo `README.md`.
 
 ### 1. ¿Cuál es la diferencia entre `main` y `develop` en Git-flow?
-
-Respuesta:
-
----
+Respuesta: En `main` va solo el código estable que ya está listo para producción (las versiones oficiales). En cambio, `develop` es la rama de trabajo donde vamos juntando y probando todas las funcionalidades nuevas antes de sacar una versión final.
 
 ### 2. ¿Por qué la funcionalidad se desarrolló en una rama `feature` y no directamente en `main`?
-
-Respuesta:
-
----
+Respuesta: Para trabajar tranquilos sin riesgo de echar a perder el código estable que está en `main`. Si algo falla mientras programamos o probamos, queda aislado en esa rama y no afecta al resto del proyecto.
 
 ### 3. ¿Qué hace el comando `git merge --no-ff`?
-
-Respuesta:
-
----
+Respuesta: Obliga a Git a crear un commit nuevo de unión (merge commit), aunque los cambios se pudieran juntar en línea recta. Esto sirve para que quede marcado en el historial que esa funcionalidad se hizo en una rama aparte.
 
 ### 4. ¿Qué diferencia habría si Git hiciera un merge con fast-forward?
-
-Respuesta:
-
----
+Respuesta: El historial quedaría todo en una sola línea recta, como si hubiéramos trabajado directo en `develop`, y se perdería el registro visual de que existió una rama separada para desarrollar esa parte.
 
 ### 5. Después del merge, ¿los commits hechos en `feature/descuento-estudiante` quedan en el historial de `develop`?
-
-Respuesta:
-
----
+Respuesta: Sí, todos los commits que hicimos en `feature/descuento-estudiante` se mantienen en el historial de `develop`. Aunque después borremos la rama local, los commits y sus cambios siguen ahí.
 
 ### 6. ¿Qué rol cumple una rama `release`?
-
-Respuesta:
-
----
+Respuesta: Sirve para dejar todo listo antes de pasar a `main`. En esta rama se pulen los últimos detalles, como corregir algún error chico o actualizar la documentación, sin frenar a los que siguen agregando cosas nuevas en `develop`.
 
 ### 7. ¿Es posible usar Integración Continua con Git-flow? Justifica brevemente.
-
-Respuesta:
-
----
+Respuesta: Sí, se puede sin problema. Por ejemplo, configurando GitHub Actions se pueden correr los tests automáticamente cada vez que alguien sube cambios o hace un merge hacia `develop` o `main`, para asegurarse de que nada se rompa antes de integrar.
 
 ## Generar evidencia 
 
