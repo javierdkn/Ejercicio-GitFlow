@@ -191,7 +191,7 @@ Por ejemplo, agrega una breve descripción del sistema en la siguiente sección:
 
 ### Descripción del sistema
 
-Escribe aquí una descripción breve del sistema:
+Escribe aquí una descripción breve del sistema:Sistema modular en Node.js diseñado para calcular precios finales de productos aplicando reglas de descuento según el tipo de cliente (incluyendo tarifa normal y un 15% de descuento para estudiantes), validado mediante pruebas unitarias automatizadas.
 
 > Respuesta del estudiante: ...
 
